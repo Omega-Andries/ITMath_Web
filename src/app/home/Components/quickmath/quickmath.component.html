@@ -1,0 +1,95 @@
+<section class="section is-primary">
+    <div class="container has-text-centered">
+      <h1 class="title">Quick Maths</h1>
+      <div class="columns is-multiline" *ngIf="availableCalculations"> 
+        <div class="column is-4" *ngFor="let calculation of availableCalculations">
+          <div class="card" style="margin: auto; height: 100%;">
+            <div class="card-content">
+              <p class="subtitle">{{calculation.CalcName}}</p>
+              <p><i>{{calculation.CalcDescription1}}</i></p>
+ 
+                <button class="button is-link " style="margin: auto; margin-top: 20%;" (click)="calculateIT(calculation.CalcType)">{{calculation.CalcType}}</button>
+            </div>
+          </div>
+      </div>
+      
+    </div>
+    <button class="button is-link is-outlined is-rounded is-fullwidth" (click)="moreCalc()">{{ShowMath}}</button>
+    </div>
+  </section>
+  
+  <!--lcm-->
+  <div class="modal" [ngClass]="{ 'is-active' : lcm }">
+    <div class="modal-background"></div>
+      <div class="modal-card">
+      <header class="modal-card-head has-text-centered">
+        <p class="modal-card-title">Compute The LCM</p><br/>
+        <button class="delete" aria-label="close" (click)="calculateIT('LCM')"></button>
+      </header>
+        <app-lcm></app-lcm>
+    </div>
+    
+  </div>
+  
+  
+  <!--gcd-->
+  <div class="modal" [ngClass]="{ 'is-active' : gcd }">
+    <div class="modal-background"></div>
+      <div class="modal-card">
+      <header class="modal-card-head has-text-centered">
+        <p class="modal-card-title">Compute The GCD</p><br/>
+        <button class="delete" aria-label="close" (click)="calculateIT('GCD')"></button>
+      </header>
+        <app-gcd></app-gcd>
+    </div>
+  </div>
+  
+  <!--mod-->
+  <div class="modal" [ngClass]="{ 'is-active' : mod }">
+    <div class="modal-background"></div>
+      <div class="modal-card">
+      <header class="modal-card-head has-text-centered">
+        <p class="modal-card-title">Compute The Mod</p><br/>
+        <button class="delete" aria-label="close" (click)="calculateIT('MOD')"></button>
+      </header>
+        <app-mod></app-mod>
+    </div>
+  </div>
+
+    <!--order-->
+    <div class="modal" [ngClass]="{ 'is-active' : order }">
+      <div class="modal-background"></div>
+        <div class="modal-card order">
+        <header class="modal-card-head has-text-centered">
+          <p class="modal-card-title">Group Or Element Order</p><br/>
+          <button class="delete" aria-label="close" (click)="calculateIT('ORDER')"></button>
+        </header>
+          <app-order></app-order>
+      </div>
+      
+    </div>
+    
+    
+    <!--group-->
+    <div class="modal" [ngClass]="{ 'is-active' : group }">
+      <div class="modal-background"></div>
+        <div class="modal-card group">
+        <header class="modal-card-head has-text-centered">
+          <p class="modal-card-title">Generate and get group Info</p><br/>
+          <button class="delete" aria-label="close" (click)="calculateIT('GROUP')"></button>
+        </header>
+          <app-group></app-group>
+      </div>
+    </div>
+    
+    <!--subgroup-->
+    <div class="modal" [ngClass]="{ 'is-active' : subgroup }" >
+      <div class="modal-background" ></div>
+        <div class="modal-card subgroup">
+        <header class="modal-card-head has-text-centered">
+          <p class="modal-card-title">Generate and get subgroup Info</p><br/>
+          <button class="delete" aria-label="close" (click)="calculateIT('SUBGROUP')"></button>
+        </header>
+          <app-subgroup></app-subgroup>
+      </div>
+    </div>

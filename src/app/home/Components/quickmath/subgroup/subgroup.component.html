@@ -1,0 +1,72 @@
+<section class="modal-card-body" >
+
+<div class="columns is-multiline">
+    <div class="column is-two-thirds">
+        <div class="columns">
+            <div class="column is-one-quarter">
+                <p>
+                    U (
+                    <span>
+                        <input class= "input is-small" type="number" style="width: 70px;" [(ngModel)] = "groupUN"/>
+                    </span>
+                    )
+                </p>
+                <br/>
+                <p>
+                    &lt; (
+                    <span>
+                        <input class= "input is-small" type="number" style="width: 70px;" [(ngModel)] = "groupUNElement"/>
+                    </span>
+                    ) &gt; = 
+                </p> 
+                <br/>
+
+            </div>
+            <div class="column">
+                <br/><br/>
+                <input class= "input is-fullwidth is-success" type="text" disabled [(ngModel)] = "groupUNAnswer"/>
+            </div>
+        </div>
+        <button class="button is-link is-fullwidth is-rounded " (click) = "generateSubgroup('UN')">
+            Generate
+        </button>
+        <br/>
+        <div class="columns">
+            <div class="column is-one-quarter">
+                <p>
+                    Z (
+                    <span>
+                        <input class= "input is-small" type="number" style="width: 70px;" [(ngModel)] = "groupZN"/>
+                    </span>
+                    )
+                </p>
+                <br/>
+                <p>
+                    &lt; (
+                    <span>
+                        <input class= "input is-small" type="number" style="width: 70px;" [(ngModel)] = "groupZNElement"/>
+                    </span>
+                    ) &gt; = 
+                </p> 
+                <br/>
+
+            </div>
+            <div class="column">
+                <br/><br/>
+                <input class= "input is-fullwidth is-success" type="text" disabled [(ngModel)] = "groupZNAnswer"/>
+            </div>
+        </div>
+        <button class="button is-link is-fullwidth is-rounded" (click) = "generateSubgroup('ZN')">
+            Generate
+        </button>
+    </div>
+    <div class="column">
+        <h1 class="subtitle is-3 is-family-monospace">
+            Subgroup Info:
+        </h1>
+        <textarea [(ngModel)] = "groupInfo" class="textarea is-large is-fullwidth" style="height: 320px;"  placeholder="Your group info will be here" disabled>
+
+        </textarea>
+    </div>
+</div>
+</section>

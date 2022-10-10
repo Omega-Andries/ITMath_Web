@@ -28,7 +28,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bulma/css/bulma.css",
+              "node_modules/bulma-social/css/all.css"
+        
             ],
             "scripts": []
           },
@@ -124,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "ITMathWeb"
+  "defaultProject": "ITMathWeb",
+  "cli": {
+    "analytics": false
+  }
 }

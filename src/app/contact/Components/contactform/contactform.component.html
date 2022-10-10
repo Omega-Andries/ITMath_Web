@@ -1,0 +1,96 @@
+<form #contactForm ="ngForm">
+    <!--Name and email part-->
+    <div class="columns is-2">
+      
+      <!--Name-->
+      <div class="column">
+        <div class="field">
+          <label class ="label">Name</label>
+          <p class="control has-icons-left has-icons-right">
+            <input 
+            class="input"
+             type="text"
+             name="name"
+             [(ngModel)] = "name"
+              #n ="ngModel"
+              placeholder="Your Name"
+              required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+            </span>
+          </p>
+          <div class ="help is-error" *ngIf ="n.invalid&&n.touched">
+            Your name is required
+          </div>
+        </div>
+      </div>
+      
+      <!--Email-->
+      <div class="column">    
+        <div class="field">
+          <label class ="label">Email</label>
+            <p class="control has-icons-left has-icons-right">
+              <input 
+                class="input"
+                type="email"
+                name="email"
+                [(ngModel)] = "email"
+                #e ="ngModel"
+                placeholder="Email"
+                required
+                email>
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+            </p>  
+            <div class ="help is-error" *ngIf ="e.invalid&&e.touched">
+              Your email is required and should be valid!
+            </div>
+          </div>
+      </div>
+    </div>
+    
+    <!--subject-->
+    <div class="field">
+      <label class="label">Subject(Optional)</label>
+      <input 
+        type="text"
+        class="input is-microsoft"
+        name = "subject"
+        [(ngModel)] = "subject"
+        placeholder="What's this message about"
+      >
+    </div>
+    <!--your message-->
+    <div class="field">
+      <label class="label">Message</label>
+      <textarea 
+        type="text" 
+        class="textarea is-microsoft" 
+        name ="message"
+        [(ngModel)] = "message"
+        #m = "ngModel" 
+        placeholder="Your Message"
+        required>
+      </textarea>
+      <div class ="help is-error" *ngIf ="m.invalid&&m.touched">
+        A Message Is required
+      </div>
+    </div>
+  
+    <!--send-->
+    <button 
+    type="submit"
+     class="button is-link is-medium {{sending}}" 
+     
+     (click)="saveContact()"
+     
+     [disabled] = "contactForm.invalid">Send</button>
+  </form>
+  <div class="modal" [ngClass]="{ 'is-active' : noty }">
+    <div class="modal-background"></div>
+    <div class="notification is-link">
+    <button class="delete" (click) ="byeNoty()"></button>
+      <p>{{savedStatus}}<br/><i class="fas fa-check-circle"></i></p>
+  </div>
+  </div>

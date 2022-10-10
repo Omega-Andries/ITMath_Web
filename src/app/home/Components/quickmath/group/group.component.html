@@ -1,0 +1,55 @@
+<section class="modal-card-body">
+    <div class="columns is-multiline">
+        <div class="column is-two-thirds">
+            <div class="columns">
+                <div class="column is-one-quarter">
+                    <p>
+                        U (
+                        <span>
+                            <input class= "input is-small" type="number" style="width: 70px;" [(ngModel)]="groupUN"/>
+                        </span>
+                        ) = 
+                    </p>
+
+                </div>
+                <div class="column">
+                    <input class= "input is-fullwidth is-success" [(ngModel)]="groupUNElements" type="text" disabled/>
+                </div>
+                
+            </div>
+            <button class="button is-link is-fullwidth is-rounded" (click) ="generateGroup('UN')">
+                Generate
+            </button>
+            <div class="columns">
+               
+                <div class="column is-one-quarter">
+                    <br/>
+                    <p>
+                        Z (
+                        <span>
+                            <input class= "input is-small" type="number" style="width: 70px;" [(ngModel)]="groupZN"/>
+                        </span>
+                        ) = 
+                    </p>
+                    
+                </div>
+                <div class="column">
+                    <br/>
+                    <input class= "input is-fullwidth is-success" [(ngModel)]="groupZNElements" type="text" disabled/>
+                </div>
+            </div>
+            <button class="button is-link is-fullwidth is-rounded" (click) ="generateGroup('ZN')">
+                Generate
+            </button>
+            <br/>
+        </div>
+        <div class="column">
+            <h1 class="subtitle is-3 is-family-monospace">
+                Group Info:
+            </h1>
+            <textarea [(ngModel)]="groupInfo" class="textarea is-large is-fullwidth" style="height: 250px;"  placeholder="Your group info will be here" disabled>
+    
+            </textarea>
+        </div>
+    </div>
+</section>

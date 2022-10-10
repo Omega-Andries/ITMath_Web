@@ -1,0 +1,112 @@
+<section class="modal-card-body has-text-centered">
+    <h1 class="subtitle is-family-monospace is-size-3">Group Order</h1>
+    <div class="columns">
+
+        <div class="column">
+            <div class="columns">
+                <div class="column">
+                    <p>
+                        |U (
+                        <span>
+                            <input class= "input is-small" type="text" style="width: 70px;" [(ngModel)] = "nGroupU"/>
+                        </span>
+                        ) | = 
+                    </p>
+   
+                </div>
+                <div class="column">
+                    <input class= "input is-small" type="number" style="width: 100px;" [(ngModel)] = "groupAnswerU" disabled/>
+                </div>
+            </div>
+            <button class="button is-link is-fullwidth is-rounded" (click) = "groupOrder('UN')">
+                Compute
+            </button>
+        </div>
+
+ 
+        <div class="column">
+            <div class="columns">
+                <div class="column">
+                    <p>
+                        |Z (
+                        <span>
+                            <input class= "input is-small" type="number" style="width: 70px;" [(ngModel)] = "nGroupZ" />
+                        </span>
+                        ) | = 
+                    </p>
+                </div>
+                <div class="column">
+                    <input class= "input is-small" type="text" style="width: 100px;" [(ngModel)] = "groupAnswerZ" disabled/>
+                </div>
+            </div>
+            <button class="button is-link is-fullwidth is-rounded " (click) = "groupOrder('ZN')">
+                Compute
+            </button>
+
+        </div>
+    </div>
+
+    <hr/>
+    <h1 class="subtitle is-family-monospace is-size-3">Element Order</h1>
+    <div class ="columns">
+        <div class="column">
+            <p class="subtitle is-family-primary is-size-6">
+                From <br/>U ( 
+                <span>
+                    <input class= "input is-small" type="number" style="width: 70px;" [(ngModel)] = "nGroupUE"/>
+                </span>
+                )
+            </p>
+            <div class="columns">
+                <div class="column is-6">
+                    <p class="subtitle is-family-primary is-size-6">
+                        | &lt; ( 
+                            <span>
+                            <input class= "input is-small" type="number" style="width: 70px;" [(ngModel)] = "nElementU"/>
+                        </span>
+                        ) &gt; | = 
+                    </p>
+                   
+
+                </div>
+                <div class="column is-6">
+                    <input class= "input is-small" type="number" style="width: 100px;" disabled [(ngModel)] = "elementAnswerU"/>
+                </div>
+            </div>
+            <button class="button is-link is-fullwidth is-rounded " (click) = "elementOrder('UN')">
+                Compute
+            </button> 
+            <br/>
+
+        </div>
+        <div class="column">
+            <p class="subtitle is-size-6 is-family-sans-serif">
+                From <br/>Z ( 
+                <span>
+                    <input class= "input is-small" type="number" style="width: 70px;" [(ngModel)] = "nGroupZE"/>
+                </span>
+                )
+            </p>
+            <div class="columns">
+                <div class="column">
+                    <p class="subtitle is-size-6 is-family-sans-serif">
+                        | &lt; ( 
+                            <span>
+                            <input class= "input is-small" type="number" style="width: 70px;" [(ngModel)] = "nElementZ"/>
+                        </span>
+                        ) &gt; | = 
+                    </p>
+                    
+
+                </div>
+                <div class="column">
+                    <input class= "input is-small" type="number" style="width: 100px;" disabled [(ngModel)] = "elementAnswerZ"/>
+                </div>
+            </div>
+            <button class="button is-link is-fullwidth is-rounded " (click) = "elementOrder('ZN')">
+                Compute
+            </button> 
+        </div>
+    </div>
+    <br/>
+</section>

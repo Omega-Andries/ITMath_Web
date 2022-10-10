@@ -1,0 +1,35 @@
+.modal-card{
+      
+}
+
+.order{
+    margin:auto;
+    width: 55%; 
+}
+.group{
+    margin:auto;
+    width: 80%; 
+}
+.subgroup{
+    margin:auto;
+    width: 80%; 
+}
+
+@media (max-width:1100px) {
+    .order{
+        margin:auto;
+        width: 100%; 
+        overflow-y: auto;
+    }
+
+    .group{
+        margin:auto;
+        width: 100%; 
+        overflow-y: auto;
+    }
+    .subgroup{
+        margin:auto;
+        width: 100%; 
+        overflow-y: auto;
+    }
+}

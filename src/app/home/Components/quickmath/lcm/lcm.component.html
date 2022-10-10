@@ -1,0 +1,39 @@
+<section class="modal-card-body">
+    <div class="columns">
+      <div class="column">
+        <div class="field">
+          <label class="label">lcm(</label>
+        </div>
+      </div>
+
+    <div class="column">
+      <div class="field">
+        <input  class="input is-microsoft" type="number"  #a placeholder="a" required>
+      </div>
+    </div>
+    <div class="column">
+      <div class="field">
+      <label class="label">,</label>
+      </div>
+    </div>
+    <div class="column">
+      <div class="field">
+        <input  class="input is-microsoft" type="number" #b placeholder="b" required>
+      </div>
+    </div>
+    <div class="column">
+      <div class="field">
+      <label class="label">) =</label>
+      
+      </div>
+    </div>
+    <div class="column">
+      <div class="field"> 
+        <label class="label">{{n}}</label>
+      </div>
+    </div>
+    
+    </div>
+    <button class="button is-link" (click)="lcmCompute(a.value,b.value)">Compute</button>
+  
+  </section>

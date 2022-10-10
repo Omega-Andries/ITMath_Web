@@ -1,0 +1,47 @@
+<div class="hero is-black has-text-centered ">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title" style="color:white">Your Thoughts On The Application?</h1><br/>
+        <h2  style="color:grey">
+          <i>We do our best to ensure we produce quality in all our products, no matter how small.
+          <br/> So please report any defects, errors.
+          <br/> Chances are, you love it, so feel free to share also your compliments
+          </i>
+          <br/>
+          😊
+        </h2>
+        <br/>
+      
+        <div class="field">
+         
+          <input 
+            type="text" 
+            class="input is-rounded is-microsoft" 
+            name="suggestion"
+            [(ngModel)] = "sugg"
+            #suggestion = "ngModel"
+            style="width:80%;"
+            required>  
+          
+          <div class="help is-error" *ngIf="suggestion.invalid && suggestion.touched">
+            You Need To Write An App suggestion
+          </div>
+        </div>
+        <br/>
+        <button 
+            class="button is-microsoft is-medium {{sending}}" 
+            (click) = "saveSuggestion()" 
+            [disabled] = "suggestion.invalid">
+            Send
+         </button>
+       
+     </div>
+      </div>
+  </div>
+  <div class="modal" [ngClass]="{ 'is-active' : noty }">
+    <div class="modal-background"></div>
+    <div class="notification is-link">
+    <button class="delete" (click) ="byeNoty()"></button>
+      <p>{{savedStatus}}<br/><i class="fas fa-check-circle"></i></p>
+  </div>
+  </div>
